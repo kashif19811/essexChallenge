@@ -1,38 +1,21 @@
-import java.util.Random
-
-// Shuffles the array of cards
-fun shuffle(cards: IntArray) {
-    val rand = Random()
-    for (i in cards.indices) { // Shuffles 0 through 51 indices (inclusive)
-        // Random for remaining positions
-        val r = i + rand.nextInt(cards.size - i)
-        // swap elements
-        val temp = cards[r]
-        cards[r] = cards[i]
-        cards[i] = temp
-    }
-}
-
-// Prints all elements of cards array
-fun printCardArray(arrayOfCards: IntArray) {
-    arrayOfCards.forEach { print("$it ") }
+// Prints all elements of cards list
+fun printCardList(listOfCards: ArrayList<Int>) {
+    listOfCards.forEach { print("$it ") }
 }
 
 // Driver code
 fun main(args: Array<String>) {
-    // Create an array of cards from 1 to 52.
-    // We can use intArrayOf here as well but this allows us to specify a range.
-    // However it creates a list then converts it an array
-    val arrayOfCards: IntArray = (1..52).toList().toIntArray()
+    // Create a list of cards from 1 to 52.
+    val listOfCards = arrayListOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+            16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34,
+            35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52)
 
     println("Before shuffle:")
-    // Printing all shuffled elements of cards
-    printCardArray(arrayOfCards)
+    printCardList(listOfCards)
 
     // Shuffle cards
-    shuffle(arrayOfCards)
+    listOfCards.shuffle()
 
     println("\n\nAfter shuffle:")
-    // Printing all shuffled elements of cards
-    printCardArray(arrayOfCards)
+    printCardList(listOfCards)
 }
