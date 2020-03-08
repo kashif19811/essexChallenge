@@ -5,7 +5,7 @@ fun shuffle(cards: IntArray) {
     val rand = Random()
     for (i in cards.indices) { // Shuffles 0 through 51 indices (inclusive)
         // Random for remaining positions
-        val r = i + rand.nextInt(52 - i)
+        val r = i + rand.nextInt(cards.size - i)
         // swap elements
         val temp = cards[r]
         cards[r] = cards[i]
