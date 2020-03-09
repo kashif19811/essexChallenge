@@ -30,8 +30,8 @@ Please put the code in an online repository and provide the link before the inte
 ---
 ## MVP Solution Notes
 1.  Due to time constraints, the initial MVP will include #1 and #2 from the Requirements above.
-2.  Solution is completed with Kotlin using a static class and methods. See src/CardGame.kt.
-3.  Unit Tests are located in test/CardGameTest.kt.
+2.  Solution is completed with Kotlin using a static class and methods. See `src/CardGame.kt`.
+3.  Unit Tests are located in `test/CardGameTest.kt`.
 3.  Kotlin provides many benefits over Java:
     Null Safety,
     Expression assignments,
