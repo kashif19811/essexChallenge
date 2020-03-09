@@ -1,5 +1,5 @@
-import java.util.*
-
+import java.util.Scanner
+import java.util.InputMismatchException
 
 /**
  * Essex Management Interview Challenge: Initial MVP that covers the following requirements:
