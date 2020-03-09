@@ -24,7 +24,8 @@ Card game Repo for Essex Management Challenge
 
 Please put the code in an online repository and provide the link before the interview: github, gitlab, etc.
 
-Assignment due date: 3/9/2020
+### Assignment due date: 3/9/2020
+
 ---
 ## MVP Solution Notes
 1.  Due to time constraints, the initial MVP will include #1 and #2 from the Requirements above.
