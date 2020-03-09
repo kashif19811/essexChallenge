@@ -29,4 +29,4 @@ Please put the code in an online repository and provide the link before the inte
 Due to time constraints, the initial MVP will include #1 and #2 from the Requirements above.
 
 ## Solution Notes
-1.  Solution is completed Kotlin using a static class and methods. See src/CardGame.kt.
+1.  Solution is completed with Kotlin using a static class and methods. See src/CardGame.kt.
