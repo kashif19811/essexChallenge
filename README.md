@@ -1,4 +1,4 @@
-# Essex Manamgnet Interview Challenge
+# Essex Management Interview Challenge
 Card game Repo for Essex Management Challenge
 
 *Work with the programing language you are most familiar with.* 
