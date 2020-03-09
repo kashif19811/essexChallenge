@@ -27,40 +27,18 @@ fun main() {
             16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34,
             35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52)
 
+    // Loop through Game
     var inputNum = 0
     do {
         // Print Main Menu
         printMenu()
 
-        // Get User Input.
-        // Kotlin allows Assignments expressions in try/catch. It uses the last row in either the try or catch
-        inputNum = try {
-            val scanner  = Scanner(System.`in`)
-            scanner.nextInt()
-        } catch (e: InputMismatchException) { // Handle Non Integer inputs
-            println("$e: Please enter a Integer from 0-3.")
+        // Get User Input
+        inputNum = getUserInput()
 
-            // Reset the input value so last input does not re-trigger
-            -1
-        }
+        // Perform Option
+        performOption(inputNum, listOfCards)
 
-        // When statement (like java-switch) to determine what to do. Uses -> arrows to assign statements for each input
-        when (inputNum) {
-            1 -> printCardList(listOfCards)
-            2 -> { // Shuffle cards
-                listOfCards.shuffle()
-                printCardList(listOfCards)
-            }
-            3 -> { // Deal a card and throw Error if deck is empty
-                try {
-                    println("Card dealt: ${dealCard(listOfCards)}")
-                } catch (e: IllegalArgumentException) {
-                    println("Cannot deal card due to exception:\n$e\n")
-                } finally {
-                    printCardList(listOfCards)
-                }
-            }
-        }
     } while (inputNum != 0)
 
     println("Exiting game...")
@@ -79,6 +57,48 @@ fun printMenu() {
             "* 3. Deal a card and show updated Deck   *\n" +
             "* 0. Exit game                           *\n" +
             "******************************************")
+}
+
+/**
+ * Get user input
+ * @return Int value of the user input
+ */
+fun getUserInput(): Int {
+    // Kotlin allows Return Assignments expressions in try/catch. It uses the last row in either the try or catch
+    return try {
+        val scanner = Scanner(System.`in`)
+        scanner.nextInt()
+    } catch (e: InputMismatchException) { // Handle Non Integer inputs
+        println("$e: Please enter a Integer from 0-3.")
+
+        // Reset the input value so last input does not re-trigger
+        -1
+    }
+}
+
+/**
+ * Execute option based on desired input selection.
+ * @param inputNum Input number given
+ * @param listOfCards ArrayList of cards
+ */
+fun performOption(inputNum: Int, listOfCards: ArrayList<Int>) {
+    // When statement (like java-switch) to determine what to do. Uses -> arrows to assign statements for each input
+    when (inputNum) {
+        1 -> printCardList(listOfCards)
+        2 -> { // Shuffle cards
+            listOfCards.shuffle()
+            printCardList(listOfCards)
+        }
+        3 -> { // Deal a card and throw Error if deck is empty
+            try {
+                println("Card dealt: ${dealCard(listOfCards)}")
+            } catch (e: IllegalArgumentException) {
+                println("Cannot deal card due to exception:\n$e\n")
+            } finally {
+                printCardList(listOfCards)
+            }
+        }
+    }
 }
 
 /**
