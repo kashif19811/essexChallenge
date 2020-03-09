@@ -24,13 +24,12 @@ Card game Repo for Essex Management Challenge
 
 Please put the code in an online repository and provide the link before the interview: github, gitlab, etc.
 
+Assignment due date: 3/9/2020
 ---
-## MVP due on 3/9/2020
-Due to time constraints, the initial MVP will include #1 and #2 from the Requirements above.
-
-## Solution Notes
-1.  Solution is completed with Kotlin using a static class and methods. See src/CardGame.kt.
-2.  Kotlin provides many benefits over Java:
+## MVP Solution Notes
+1.  Due to time constraints, the initial MVP will include #1 and #2 from the Requirements above.
+2.  Solution is completed with Kotlin using a static class and methods. See src/CardGame.kt.
+3.  Kotlin provides many benefits over Java:
     Null Safety,
     Expression assignments,
     Iterate over a list all methods on each element in one-line,
