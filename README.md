@@ -24,6 +24,7 @@ Card game Repo for Essex Management Challenge
 
 Please put the code in an online repository and provide the link before the interview: github, gitlab, etc.
 
+---
 ### Assignment due date: 3/9/2020
 
 ---
