@@ -30,3 +30,11 @@ Due to time constraints, the initial MVP will include #1 and #2 from the Require
 
 ## Solution Notes
 1.  Solution is completed with Kotlin using a static class and methods. See src/CardGame.kt.
+2.  Kotlin provides many benefits over Java:
+    Null Safety,
+    Expression assignments,
+    Iterate over a list all methods on each element in one-line,
+    Extension functions,
+    Data classes,
+    Operator overloading and many more.
+    
